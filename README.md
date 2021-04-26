@@ -1,1 +1,1 @@
-# studyGo
+# study
