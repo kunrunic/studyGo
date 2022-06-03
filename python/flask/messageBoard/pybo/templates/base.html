@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
     <!-- Required meta tags -->
@@ -11,8 +11,13 @@
     <title>Hello, pybo!</title>
 </head>
 <body>
+{% include "navbar.html" %}
 <!-- 기존 템플릿에 삽입할 내용 base 를 상속한 파일에서 구현할 영역 -->
 {% block content %}
 {% endblock %}
+<!-- jQuery JS -->
+<script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
+<!-- Bootstrap JS -->
+<script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
 </body>
 </html>
