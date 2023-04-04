@@ -3,6 +3,37 @@
 <div class="container my-3">
     <table class="table">
         <thead>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <tr class="table-dark">
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성일시</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if question_list %}
+            {% for question in question_list.items %}
+            <tr>
+                <td>{{ question_list.total - ((question_list.page-1) * question_list.per_page) - loop.index0 }}</td>
+                <td>
+                    <a href="{{ url_for('question.detail', question_id=question.id) }}/">{{ question.subject }}</a>
+                </td>
+                <td>{{ question.create_date|datetime }}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="3">질문이 없습니다.</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+=======
+>>>>>>> flask/0.0.3
         <tr class="table-dark">
             <th>번호</th>
             <th>제목</th>
@@ -30,3 +61,7 @@
     <a href="{{ url_for('question.create') }}" class="btn btn-primary">질문 등록하기</a>
 </div>
 {% endblock %}
+<<<<<<< HEAD
+=======
+>>>>>>> 5452db5 (messageBoard under development study)
+>>>>>>> flask/0.0.3
